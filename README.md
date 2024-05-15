@@ -6,7 +6,7 @@
   <!-- <a href="https://test_cpp.netlify.app">Demo</a> -->
 </div>
 
-<h1 align="center">Test_cpp</h1>
+<h1 align="center">Paho MQTT Demo</h1>
 
 <p align="center">
   <img alt="Github top language" src="https://img.shields.io/github/languages/top/{{YOUR_GITHUB_USERNAME}}/test_cpp?color=56BEB8">
@@ -51,7 +51,7 @@ This repository contains a simple C++ program that demonstrates how to publish m
 
 ## :sparkles: Features ##
 
-:heavy_check_mark: Publish message with MQTT;\
+:heavy_check_mark: CMake file for testing the paho MQTT in Ubuntu;\
 :heavy_check_mark: Testing the Paho library;
 
 ## :rocket: Technologies ##
@@ -64,24 +64,47 @@ The following tools were used in this project:
 
 ## :white_check_mark: Requirements ##
 
-Before starting :checkered_flag:, you need to have [Git](https://git-scm.com) and [Node](https://nodejs.org/en/) installed.
+Before starting :checkered_flag:, you need to have [Mosquitto](https://mosquitto.org/) and [Cmake](https://cmake.org/) installed.
+
+To installed the Paho make sure you are using cmake to build.
+
+```bash
+# Clone this library
+$ git clone https://github.com/eclipse/paho.mqtt.c.git
+
+# Access
+$ cd paho.mqtt.c
+
+# Making the files
+$ cmake -Bbuild -H. -DPAHO_BUILD_STATIC=on -DPAHO_WITH_SSL=off
+
+# Install the Paho MQTT
+$ sudo cmake --build build/ --target install
+```
 
 ## :checkered_flag: Starting ##
 
 ```bash
 # Clone this project
-$ git clone https://github.com/{{YOUR_GITHUB_USERNAME}}/test_cpp
+$ git clone https://github.com/AlirezaBeigiMech/paho_simple_mqtt.git
 
-# Access
-$ cd test_cpp
+# running and setting up Cmake from CmakeList
+$ cmake ..
 
-# Install dependencies
-$ yarn
+# Building the files
+$ cmake --build .
 
-# Run the project
-$ yarn start
+# Run the subescriber in Ubuntu
+$ mosquitto_sub -h localhost -p 1883 -t "MQTTExamples" 
+# The server will initialize in the <http://localhost:1883>
 
-# The server will initialize in the <http://localhost:3000>
+
+# Run the c project
+$ ./MQTTExample
+
+# You should watch the result of MQTT communication.
+
+
 ```
 
 ## :memo: License ##
@@ -89,7 +112,7 @@ $ yarn start
 This project is under license from MIT. For more details, see the [LICENSE](LICENSE.md) file.
 
 
-Made with :heart: by <a href="https://github.com/{{YOUR_GITHUB_USERNAME}}" target="_blank">{{YOUR_NAME}}</a>
+Made with :heart: by <a href="https://github.com/AlirezaBeigiMech" target="_blank">Alireza Beigi</a>
 
 &#xa0;
 
