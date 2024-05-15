@@ -1,0 +1,3 @@
+/home/ali/test_cpp/build/CMakeFiles/MQTTExample.dir
+/home/ali/test_cpp/build/CMakeFiles/edit_cache.dir
+/home/ali/test_cpp/build/CMakeFiles/rebuild_cache.dir
