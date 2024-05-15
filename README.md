@@ -27,7 +27,7 @@
 <!-- Status -->
 
 <!-- <h4 align="center"> 
-	🚧  Test_cpp 🚀 Under construction...  🚧
+	🚧  Testing the paho mqtt library 🚀 Under construction...  🚧
 </h4> 
 
 <hr> -->
@@ -46,23 +46,21 @@
 
 ## :dart: About ##
 
-Describe your project
+This repository contains a simple C++ program that demonstrates how to publish messages to an MQTT broker using the Paho MQTT C client library. The program establishes a connection to the MQTT broker, publishes a "Hello World!" message to a specified topic, and then disconnects.
+
 
 ## :sparkles: Features ##
 
-:heavy_check_mark: Feature 1;\
-:heavy_check_mark: Feature 2;\
-:heavy_check_mark: Feature 3;
+:heavy_check_mark: Publish message with MQTT;\
+:heavy_check_mark: Testing the Paho library;
 
 ## :rocket: Technologies ##
 
 The following tools were used in this project:
 
-- [Expo](https://expo.io/)
-- [Node.js](https://nodejs.org/en/)
-- [React](https://pt-br.reactjs.org/)
-- [React Native](https://reactnative.dev/)
-- [TypeScript](https://www.typescriptlang.org/)
+- [Paho](https://eclipse.dev/paho/index.php?page=clients/c/index.php)
+- [Mosquitto](https://mosquitto.org/)
+- [Cmake](https://cmake.org/)
 
 ## :white_check_mark: Requirements ##
 
