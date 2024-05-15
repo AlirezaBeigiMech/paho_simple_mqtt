@@ -11,14 +11,6 @@
 #define QOS         1
 #define TIMEOUT     10000L
 
-// Function to calculate the factorial of a number using recursion
-int factorial(int n) {
-    if (n <= 1) {
-        return 1;
-    } else {
-        return n * factorial(n - 1);
-    }
-}
 
 int main(){
 
