@@ -1,11 +1,3 @@
-<div align="center" id="top"> 
-  <img src="./.github/app.gif" alt="Test_cpp" />
-
-  &#xa0;
-
-  <!-- <a href="https://test_cpp.netlify.app">Demo</a> -->
-</div>
-
 <h1 align="center">Paho MQTT Demo</h1>
 
 <p align="center">
