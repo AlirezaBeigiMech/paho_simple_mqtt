@@ -4,9 +4,9 @@
 #include "string.h"
 #include "MQTTClient.h"
 
-#define ADDRESS     "tcp://localhost:1883"
+#define ADDRESS     "localhost:1883"
 #define CLIENTID    "ExampleClientPub"
-#define TOPIC       "MQTT Examples"
+#define TOPIC       "MQTTExamples"
 #define PAYLOAD     "Hello World!"
 #define QOS         1
 #define TIMEOUT     10000L
@@ -31,6 +31,7 @@ int main(){
         printf("Failed to connect, return code %d\n", rc);
         exit(-1);
     }
+    printf("connected");
     pubmsg.payload = (void*)PAYLOAD;
     pubmsg.payloadlen = strlen(PAYLOAD);
     pubmsg.qos = QOS;
@@ -43,19 +44,7 @@ int main(){
     printf("Message with delivery token %d delivered\n", token);
     MQTTClient_disconnect(client, 10000);
     MQTTClient_destroy(&client);
-    //return rc;
+    return rc;
 
-
-    int number;
-    std::cout << "Enter a positive integer: ";
-    std::cin >> number;
-
-    if (number < 0) {
-        std::cout << "Factorial of a negative number doesn't exist.\n";
-    } else {
-        std::cout << "Factorial of " << number << " is " << factorial(number) << std::endl;
-    }
-
-    return 0;
     
 }
